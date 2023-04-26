@@ -134,7 +134,7 @@ export default function SpecializedTracks() {
                         {d.fields.quarter4Id}: {d.fields.quarter4}
                       </Text>
                     </Stack>
-                    <Stack mt="4"p="10" boxShadow="dark-lg" h="48">
+                    <Stack mt="4"p="10"   boxShadow="dark-lg" h="48">
                       <Text fontFamily="heading" fontWeight="extrabold">
                         Quarter 5:
                       </Text>
@@ -154,7 +154,9 @@ export default function SpecializedTracks() {
           gridColumn={{ base: "1 / 2", md: "2 / 3" }}
           gridRow={{ base: "2 / 3", md: "auto" }}
           overflowY={{ base: "initial", md: "scroll" }}
-          mb="28"
+       
+          pt={["20","20","5","5"]}
+          pb="28"
           sx={{
             '&::-webkit-scrollbar': {
               width: '16px',
