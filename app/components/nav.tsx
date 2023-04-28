@@ -13,9 +13,12 @@ export default function Nav() {
       <Flex direction="row"
       justifyContent="space-between"
       alignItems="stretch"
+      top="0"
+      left="0"
+      right="0"
       width={{ [312]:"100%", base: "100%",sm:"100%",md:"full", lg: "full" }} 
       >
-        <Image src="/logo.png" alt="" boxSize={[10, 10, 20]} />
+        <Image src="/logo.png" alt="" ml="2" mt="2" boxSize={[10, 10, 20]} />
         <Spacer width="20%" />
         <Breadcrumb
           paddingTop="5"

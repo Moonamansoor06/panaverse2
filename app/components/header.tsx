@@ -41,22 +41,27 @@ export default function Nav() {
   }, []);
   return (
     <Flex direction="row"
-    justifyContent="space-between"
-    alignItems="stretch"
-    width={{ [312]:"100%", base: "100%",sm:"100%",md:"full", lg: "full" }} 
-    >
-      <Image src="/logo.png" alt="" boxSize={[10, 10, 20]} />
+      justifyContent="space-between"
+      alignItems="stretch"
+      
+      top="0"
+      left="0"
+      right="0"
+      width={{ [312]:"100%", base: "100%",sm:"100%",md:"full", lg: "full" }} 
+      >
+      <Image src="/logo.png" alt="" ml="2" mt="2" boxSize={[10, 10, 20]} />
       <Spacer width="20%" />
       <Breadcrumb
         paddingTop="5"
         paddingRight="1"
         fontWeight={["bold", "bold", "bold"]}
-        fontSize={["x-small", "x-small", "medium"]}
+   
       >
         <BreadcrumbItem>
             <BreadcrumbLink href="/" 
              px="4"
              py="2"
+             fontSize="md"
              border="none"
              borderRadius="md"
              width="20"
@@ -73,6 +78,7 @@ export default function Nav() {
         <MenuButton
           as={Button}
           py="2"
+          fontSize="md"
           rightIcon={<TiArrowDown />}
           bg="transparent"
           _hover={{ bg: "green.100" }}
@@ -87,7 +93,7 @@ export default function Nav() {
               console.log(link.href);
               return (
                 <MenuItem key={link.coreId}>
-                  <Link href={link.href}>{link.name} </Link>
+                  <Link href={link.href}>{link.label} </Link>
                 </MenuItem>
               );
             })}

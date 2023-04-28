@@ -58,12 +58,13 @@ export default function SpecializedTracks() {
 
   return (
     // main container
-    <Box id="special"
-    marginTop={["4", "4", "10", "10"]}
+    <Box
+      id="special"
+      marginTop={["4", "4", "10", "10"]}
       marginLeft="2"
       marginRight="2"
       marginBottom={["2", "24", "24"]}
-      height="auto"   
+      height="auto"
       paddingTop={["2", "20", "20"]}
       bgGradient="linear(to-br, green.100, white,white,white ) "
     >
@@ -77,7 +78,7 @@ export default function SpecializedTracks() {
         </Text>
       </Stack>
       {/* content started with main grid */}
-     
+
       <Grid
         marginTop={{ base: "2", sm: "2", md: "20" }}
         h="96"
@@ -93,40 +94,43 @@ export default function SpecializedTracks() {
           ml="2"
           mr="2"
           mb="10"
-          
         >
-{/* stack for description and headings */}
-         
+          {/* stack for description and headings */}
+
           {data.items.map((d: SpecialData, i: number) => {
             if (d.fields.specialId === idSelected) {
               return (
                 <Stack key={i}>
-                   <Stack>
-                  <Heading size="lg" fontFamily="heading" fontWeight="bold">
-                    {d.fields.name}
-                  </Heading>
-                  <Text fontFamily="heading" fontWeight="bold">
-                    Description:
-                  </Text>
-                  <Text fontFamily="body">{d.fields.description}</Text>
-                  <Button
-                    borderRadius="lg"
-                    alignSelf="right"
-                    color="green.700"
-                    bgColor="green.100"
-                    w="32"
-                    variant="link"
-                    p="2"
-                    onClick={() => {
-                      router.push(`/special/${d.fields.specialId}`);
-                    }}
+                  <Stack>
+                    <Heading size="lg" fontFamily="heading" fontWeight="bold">
+                      {d.fields.name}
+                    </Heading>
+                    <Text fontFamily="heading" fontWeight="bold">
+                      Description:
+                    </Text>
+                    <Text fontFamily="body">{d.fields.description}</Text>
+                    <Button
+                      borderRadius="lg"
+                      alignSelf="right"
+                      color="green.700"
+                      bgColor="green.100"
+                      w="32"
+                      variant="link"
+                      p="2"
+                      onClick={() => {
+                        router.push(`/special/${d.fields.specialId}`);
+                      }}
+                    >
+                      Course Details
+                    </Button>
+                  </Stack>
+                  <Flex
+                    flexDirection={["column", "column", "row", "row"]}
+                    h={["72", "72", "72", "72"]}
+                    gap={["2", "2", "4", "4"]}
+                    w="98%"
                   >
-                    Course Details
-                  </Button>
-                </Stack>
-                  <Flex flexDirection={["column","column","row","row"]}
-                   h={["72","72","72","72"]}     gap={["2","2","4","4"]} w="98%" >
-                    <Stack mt="4" p="10" boxShadow="dark-lg" h="48">
+                    <Stack mt="4" p="10" boxShadow="dark-lg" h="48" w={["95%", "95%", "45%", "45%"]}>
                       <Text fontFamily="heading" fontWeight="extrabold">
                         Quarter 4:
                       </Text>
@@ -134,7 +138,7 @@ export default function SpecializedTracks() {
                         {d.fields.quarter4Id}: {d.fields.quarter4}
                       </Text>
                     </Stack>
-                    <Stack mt="4"p="10"   boxShadow="dark-lg" h="48">
+                    <Stack mt="4" p="10" boxShadow="dark-lg" h="48" w={["95%", "95%", "45%", "45%"]}>
                       <Text fontFamily="heading" fontWeight="extrabold">
                         Quarter 5:
                       </Text>
@@ -143,27 +147,27 @@ export default function SpecializedTracks() {
                       </Text>
                     </Stack>
                   </Flex>
-                  </Stack>
-          )}})}
-                          
+                </Stack>
+              );
+            }
+          })}
         </Box>
 
         {/* list of special courses */}
         <Box
-        p="2"
+          p="2"
           gridColumn={{ base: "1 / 2", md: "2 / 3" }}
           gridRow={{ base: "2 / 3", md: "auto" }}
           overflowY={{ base: "initial", md: "scroll" }}
-       
-          pt={["20","20","5","5"]}
+          pt={["20", "20", "5", "5"]}
           pb="28"
           sx={{
-            '&::-webkit-scrollbar': {
-              width: '16px',
-              borderRadius: '8px',
+            "&::-webkit-scrollbar": {
+              width: "16px",
+              borderRadius: "8px",
               backgroundColor: `rgba(0, 0, 0, 0.05)`,
             },
-            '&::-webkit-scrollbar-thumb': {
+            "&::-webkit-scrollbar-thumb": {
               backgroundColor: `rgba(0, 0, 0, 0.05)`,
             },
           }}
@@ -202,7 +206,6 @@ export default function SpecializedTracks() {
           })}
         </Box>
       </Grid>
-    
     </Box>
   );
 }
