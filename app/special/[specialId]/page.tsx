@@ -80,10 +80,7 @@ export default function GetSpecialDesc({
       marginRight="2"
       paddingBottom={["24", "24", "24", "24"]}
       height={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-      width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
- 
-    
-    >
+      width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}>
       
         <Box
           boxShadow="md"

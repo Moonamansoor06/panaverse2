@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Nav from "./nav";
 import Header from "./header";
-import Header2 from "./header2";
+
 
 import { usePathname } from "next/navigation";
 
