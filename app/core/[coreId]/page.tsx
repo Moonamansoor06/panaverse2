@@ -53,9 +53,10 @@ export default function GetDesc({ params }: {
       marginLeft="2"
       marginRight="2"
       paddingBottom={["24", "24", "24", "24"]}
+      marginTop={["24","24", "24", "24"]}
       height={{ base: "full", sm: "full", md: "full", lg: "full" }}
       width={{ base: "95%", sm: "95%", md: "98%", lg: "98%" }}
-      paddingTop={["2", "20", "20"]}
+      paddingTop={["8","8", "8", "8"]}
       bgGradient='linear(to-br, green.100, white,white ) '>
         
       <Stack alignItems="left" >

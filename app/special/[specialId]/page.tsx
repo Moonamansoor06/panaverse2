@@ -76,21 +76,25 @@ export default function GetSpecialDesc({
 
   return (
     <Box
-      marginLeft="2"
-      marginRight="2"
-      paddingBottom={["24", "24", "24", "24"]}
-      height={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-      width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}>
+    marginLeft="2"
+    marginRight="2"
+    paddingBottom={["24", "24", "24", "24"]}
+    height={{ base: "full", sm: "full", md: "full", lg: "full" }}
+    width={{ base: "98%", sm: "98%", md: "98%", lg: "98%" }}
+    
+    paddingTop={["8","8", "8", "8"]}
+    marginTop={["24","24", "24", "24"]}
+  >
       
         <Box
           boxShadow="md"
           bgGradient="linear(to-br, green.100, white,white ) "
-          width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-        >
+          width={{ base: "98%", sm: "98%", md: "98%", lg: "98%" }}
+             >
           <Heading size="xl" mt="2" textColor="green.900" fontFamily="heading">
             Quarter 4
           </Heading>
-          <Heading size="md" mt="2" textColor="green.900" fontFamily="maincomp">
+          <Heading size="sm" mt="2" textColor="green.900" fontFamily="maincomp">
             Course Duration: 13 Weeks
           </Heading>
           <Mark
@@ -122,12 +126,12 @@ export default function GetSpecialDesc({
         <Box
           boxShadow="md"
           bgGradient="linear(to-br, green.100, white,white ) "
-          width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+          width={{ base: "98%", sm: "98%", md: "98%", lg: "98%" }}
         >
           <Heading size="xl" mt="8" textColor="green.900" fontFamily="heading">
             Quarter 5
           </Heading>
-          <Heading size="md" mt="2" textColor="green.900" fontFamily="mainComp">
+          <Heading size="sm" mt="2" textColor="green.900" fontFamily="mainComp">
             Course Duration: 13 Weeks
           </Heading>
           <Mark
@@ -141,7 +145,7 @@ export default function GetSpecialDesc({
           </Mark>
           <Text fontFamily="body">{desc5}</Text>
 
-          <Stack alignItems="left" mr="2">
+          <Stack alignItems="left" >
             <Text
               fontSize="xl"
               fontWeight="bold"

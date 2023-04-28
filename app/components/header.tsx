@@ -43,17 +43,17 @@ export default function Nav() {
     <Flex direction="row"
       justifyContent="space-between"
       alignItems="stretch"
-      
+      position="fixed"
       top="0"
       left="0"
       right="0"
-      width={{ [312]:"100%", base: "100%",sm:"100%",md:"full", lg: "full" }} 
+      width={{  base: "100%",sm:"100%",md:"full", lg: "full" }} 
       >
       <Image src="/logo.png" alt="" ml="2" mt="2" boxSize={[10, 10, 20]} />
       <Spacer width="20%" />
       <Breadcrumb
         paddingTop="5"
-        paddingRight="1"
+        paddingRight="2"
         fontWeight={["bold", "bold", "bold"]}
    
       >
@@ -77,6 +77,7 @@ export default function Nav() {
         
         <MenuButton
           as={Button}
+          mr="2"
           py="2"
           fontSize="md"
           rightIcon={<TiArrowDown />}
